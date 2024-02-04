@@ -1,0 +1,8 @@
+{"account":"kp41433.ap-southeast-1",
+"user":"pavan",
+"password": "Abc123123",
+"role":"ACCOUNTADMIN",
+"warehouse":"COMPUTE_WH",
+"database":"DEMO_DB",
+"schema":"PUBLIC"
+}
