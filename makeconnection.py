@@ -1,19 +1,21 @@
 import sys
 from snowflake.snowpark import Session
-sys.path.append('/Users/pradeep/Downloads/Udemy_course_videos/course_2_assignments/Snowpark_pipeline/')
+
+# If you are running this code in Github code spaces you don't need to execute below command,
+#sys.path.append('/Users/pradeep/Downloads/Udemy_course_videos/course_2_assignments/Snowpark_pipeline/')
+
 from generic_code import code_library
 
-# Make connection and create Snowpark session
-connection_parameters = {"account":"kp41433.ap-southeast-1", \
-"user":"pavan", \
-"password": "Abc123123", \
+# Make connection and create Snowpark session.
+# Please mention your snowflake account credentials below,
+connection_parameters = {"account":"ovmyonn-cp58207", \
+"user":"pradeep", \
+"password": "Abcd067$", \
 "role":"ACCOUNTADMIN", \
 "warehouse":"COMPUTE_WH", \
 "database":"DEMO_DB", \
 "schema":"PUBLIC" \
 }
 
+# Create connection with snowflake and return the session
 session = code_library.snowconnection(connection_parameters)
-
-
-session = snowconnection(connection_parameters)

@@ -6,16 +6,15 @@ from snowflake.snowpark.context import get_active_session
 import json
 
 ### Read from config file.
-config_snow_copy = open('/Users/pradeep/Downloads/Udemy_course_videos/course_2_assignments/Snowpark_pipeline/config/copy_to_snowstg_avro.json', "r")
+config_snow_copy = open('./config/copy_to_snowstg_avro.json', "r")
 config_snow_copy = json.loads(config_snow_copy.read())
 
-connection_parameter = open('/Users/pradeep/Downloads/Udemy_course_videos/course_2_assignments/Snowpark_pipeline/config/connection_details.json', "r")
+connection_parameter = open('./config/connection_details.json', "r")
 connection_parameter = json.loads(connection_parameter.read())
 
 session = code_library.snowconnection(connection_parameter)
 
 df = session.read.avro("@my_s3_stage/Avro_folder/userdata1.avro")
-
 
 
 def copy_to_table_semi_struct_data(session,config_file,schema='NA'):
